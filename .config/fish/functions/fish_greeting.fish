@@ -1,4 +1,4 @@
-# Defined in /home/sebbo/.config/fish/config.fish @ line 13
+# Defined in /home/sebbo/.config/fish/config.fish @ line 12
 function fish_greeting
 	if not type fortune > /dev/null 2>&1
         	yay -S fortune
