@@ -3,7 +3,6 @@ abbr -a gpr git pull --rebase
 set -gx PATH $PATH ~/.yarn/bin/
 set -gx PATH $PATH ~/bin
 set -gx PATH $PATH ~/.local/bin
-set -gx PATH $PATH ~/.dotnet/tools
 set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 set -gx EDITOR vim  
 
