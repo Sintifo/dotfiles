@@ -4,3 +4,16 @@ if hash yay 2>/dev/null
 then
 	yay -Syu --needed - < ~/packages.txt
 fi
+
+usergroups=$(groups)
+all_groups=$(cat /etc/group)
+if ! [[ $usergroups =~ "docker" ]]
+then
+	echo "missing docker"
+	if ! [[ $all_groups =~ 'docker' ]] 
+	then 
+		sudo groupadd docker
+	fi
+	
+	sudo usermod -aG docker $(whoami)
+fi
